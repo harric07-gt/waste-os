@@ -109,4 +109,7 @@ window.addEventListener("load", function () {
     points.map(point => [point[0], point[1]]),
     { weight: 5 }
   ).addTo(map);
+setTimeout(() => {
+  map.invalidateSize();
+}, 300);
 });
