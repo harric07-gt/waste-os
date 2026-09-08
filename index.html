@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WASTE//OS Prototype</title>
 <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
 <div class="app">
@@ -72,7 +75,7 @@
 <div class="binGrid" id="binGrid"></div></section>
 
 <section id="route" class="page"><div class="intro"><small>03 / AI ROUTING</small><h2>Dynamic Collection Route</h2><p>The system prioritizes bins before they overflow.</p></div>
-<div class="routeGrid"><div class="map"><div class="road a"></div><div class="road b"></div><div class="road c"></div><span class="pin p1">A</span><span class="pin p2">B</span><span class="pin p3">C</span><span class="truck">🚛</span></div>
+<div class="routeGrid"><div class="map" id="liveMap"></div>
 <div class="panel routeList"><h3>AI PRIORITY QUEUE</h3><div class="routeRow"><b>01</b><span>BIN-042<br><small>96% full</small></span><em>HIGH</em></div><div class="routeRow"><b>02</b><span>BIN-118<br><small>89% full</small></span><em>MEDIUM</em></div><div class="routeRow"><b>03</b><span>SORTING HUB<br><small>ETA 18 min</small></span><em>ROUTE</em></div><button class="cta" onclick="recalculate()">RECALCULATE ROUTE</button><div id="routeMsg"></div></div></div></section>
 
 <section id="rewards" class="page"><div class="intro"><small>04 / BEHAVIOR ENGINE</small><h2>EcoPoints</h2><p>Reward correct segregation and build better habits.</p></div>
