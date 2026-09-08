@@ -192,3 +192,53 @@
   font-weight:bold;
   cursor:pointer;
 }
+.routeStatus {
+  min-height: 430px;
+  padding: 30px;
+  border: 1px solid #1b392a;
+  background: linear-gradient(145deg, #0b1b12, #07100c);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.routeStatus h3 {
+  margin: 0 0 5px;
+  color: #58ff9c;
+  letter-spacing: 1px;
+}
+
+.statusMain {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  background: #10261a;
+  border: 1px solid #24543a;
+}
+
+.statusDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #58ff9c;
+  box-shadow: 0 0 12px #58ff9c;
+}
+
+.statusItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #1a3528;
+}
+
+.statusItem small {
+  color: #718a7d;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.statusItem b {
+  color: #eafff1;
+}
