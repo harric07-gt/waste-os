@@ -86,3 +86,29 @@ document.querySelectorAll(".counter").forEach(counter => {
     }
   }, 30);
 });
+// Live Collection Route Map
+const map = L.map("liveMap").setView([11.1085, 77.3411], 13);
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: "&copy; OpenStreetMap contributors"
+}).addTo(map);
+
+// Collection points
+const points = [
+  [11.1085, 77.3411, "BIN-042 - 96% full"],
+  [11.1150, 77.3500, "BIN-118 - 89% full"],
+  [11.1000, 77.3300, "SORTING HUB"]
+];
+
+points.forEach(point => {
+  L.marker([point[0], point[1]])
+    .addTo(map)
+    .bindPopup(point[2]);
+});
+
+// Collection route
+const route = points.map(point => [point[0], point[1]]);
+
+L.polyline(route, {
+  weight: 5
+}).addTo(map);
